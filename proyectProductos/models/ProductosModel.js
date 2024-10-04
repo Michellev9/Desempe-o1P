@@ -51,16 +51,6 @@ class Productos {
         );
         return result.rows;
     }
-
-    // Método estático para obtener todos los productos en formato adecuado para exportar a Excel.
-    static async getAllProductsExcel() {
-        const query = `
-            SELECT producto, precio, stock_minimo, stock_maximo, existencias, sku
-            FROM productos;
-        `;
-        const result = await pool.query(query);
-        return result.rows;
-    }
 }
 
 module.exports = Productos;
