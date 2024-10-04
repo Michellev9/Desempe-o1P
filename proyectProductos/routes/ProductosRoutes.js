@@ -1,6 +1,6 @@
 const express = require('express');
 // Importa el módulo 'express' para crear el enrutador.
-const ProductosController = require('../controllers/ProductosController');
+const ProductosController = require('../controllers/ProductosModel');
 // Importa el controlador 'ProductosController' desde la ubicación especificada.
 
 const router = express.Router();
