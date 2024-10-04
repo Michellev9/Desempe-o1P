@@ -17,12 +17,6 @@ class Productos {
         return result.rows[0];
     }
 
-    // Método estático para buscar un producto por su ID.
-    static async findById(id) {
-        const result = await pool.query('SELECT * FROM productos WHERE id = $1', [id]);
-        return result.rows[0];
-    }
-
     // Método estático para actualizar un producto existente en la base de datos.
     static async update(id, data) {
         const { producto, precio, stock_minimo, stock_maximo, existencias, SKU } = data;
